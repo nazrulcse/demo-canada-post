@@ -1,0 +1,71 @@
+<div class="col-lg-12">
+  <div class="col-lg-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">Notification and Preference</div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-lg-12">
+                <h3 style="margin: 0 0 5px 0;"> Notification </h3>
+              </div>
+              <div class="col-lg-3">
+                <div class="form-group">
+                  <%= text_field_tag('notification[email]', '', class: 'form-control', placeholder: 'Email') %>
+                </div>
+              </div>
+
+              <div class="col-lg-3">
+                <div class="form-group">
+                  <%= check_box_tag 'notification[on_shipment]', true, class: 'accept_tos' %>
+                  <label> On Shipment </label>
+                </div>
+              </div>
+
+              <div class="col-lg-3">
+                <div class="form-group">
+                  <%= check_box_tag 'notification[on_exception]', false, class: 'accept_tos' %>
+                  <label> On-Exception </label>
+                </div>
+              </div>
+
+              <div class="col-lg-3">
+                <div class="form-group">
+                  <%= check_box_tag 'notification[on_delivery]', true, class: 'accept_tos' %>
+                  <label> On-Delivery </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-12">
+                <h3 style="margin: 0 0 5px 0;"> Preference </h3>
+              </div>
+
+              <div class="col-lg-3">
+                <%= check_box_tag 'preferences[show_packing_instructions]', true, class: 'accept_tos' %>
+                <label> Show-Packing-Instructions </label>
+              </div>
+
+              <div class="col-lg-3">
+                <%= check_box_tag 'preferences[show_postage_rate]', false, class: 'accept_tos' %>
+                <label> Show-Postage-Rate </label>
+              </div>
+
+              <div class="col-lg-3">
+                <%= check_box_tag 'preferences[show_insured_value]', true, class: 'accept_tos' %>
+                <label> Show-Insured-Value </label>
+              </div>
+
+              <div class="col-lg-3">
+                <%= text_field_tag('settlement_info[contract_id]', '', class: 'form-control', placeholder: 'Settlement Contact ID') %>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

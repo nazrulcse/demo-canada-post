@@ -1,0 +1,27 @@
+<h3> Shipment Information </h3>
+<ul>
+  <li>
+    <label> Xmlns </label>: <%= @shipping.xmlns %>
+  </li>
+  <li>
+    <label> Shipment ID </label>: <%= @shipping.shipment_id %>
+  </li>
+  <li>
+    <label> Status </label>: <%= @shipping.shipment_status %>
+  </li>
+  <li>
+    <label> Tracking Pin </label>: <%= @shipping.tracking_pin %>
+  </li>
+  <li>
+    <label> Creation </label>: <%= @shipping.created_at %>
+  </li>
+</ul>
+
+<h3> Shipment Tracking Links </h3>
+<ul>
+  <% @shipping.links.each do |link| %>
+      <li>
+        <%= render 'shippings/link', link: link %>
+      </li>
+  <% end %>
+</ul>

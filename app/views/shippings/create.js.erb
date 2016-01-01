@@ -1,0 +1,9 @@
+if (<%= @response[:errors].present? %>) {
+    $('.shipping-error').addClass('alert alert-danger').html("<%= @response[:errors] %>");
+}
+else {
+    $('.shipping-error').addClass('alert alert-success').html("Shipping has been created successfully");
+}
+
+$('.loader').hide();
+$("html,body").scrollTop(0)

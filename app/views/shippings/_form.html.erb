@@ -1,0 +1,30 @@
+<div class="col-lg-12">
+  <div class="col-lg-12">
+    <div class="shipping-error"></div>
+  </div>
+</div>
+<%= form_tag(shippings_path, remote: true) do %>
+
+    <%= render 'welcome/package_info' %>
+    <%= render 'welcome/notification_and_preference' %>
+
+    <div class="col-sm-12">
+      <%= render 'welcome/sender_info' %>
+      <%= render 'welcome/destination_info' %>
+    </div>
+
+    <div class="col-lg-12">
+      <div class="form-group col-lg-12">
+        <%= submit_tag('Create Shipment', class: 'btn btn-default pull-right') %>
+        <%= image_tag('arrow-loader.gif', class: 'loader') %>
+      </div>
+    </div>
+<% end %>
+
+<script type="text/javascript">
+    $(function () {
+        $(document).ajaxSend(function () {
+            $('.loader').show();
+        });
+    });
+</script>
