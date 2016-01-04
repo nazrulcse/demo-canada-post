@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/shipppit/shipppit-canada-post.git
-  revision: fa35056d89760992a40b59f2f11525c65d7d14e3
+  revision: 76fd25b3f24ce6ede69dd00d099c67a1f5484f4b
   branch: shipment
   specs:
     canada-post-api (0.0.3)
@@ -85,7 +85,7 @@ GEM
     minitest (5.8.3)
     multi_json (1.11.2)
     multi_xml (0.5.5)
-    mysql2 (0.4.1)
+    mysql2 (0.3.20)
     nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
     pg (0.18.4)
@@ -162,7 +162,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
-  mysql2
+  mysql2 (= 0.3.20)
   pg
   rails (= 4.2.5)
   sass-rails (~> 5.0)
