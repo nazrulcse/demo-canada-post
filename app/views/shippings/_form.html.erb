@@ -5,6 +5,17 @@
 </div>
 <%= form_tag(shippings_path, remote: true) do %>
 
+    <div class="col-lg-12">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading"> Service Settings</div>
+          <div class="panel-body">
+            <%= select_tag('service_code', options_for_select(CanadaPost::Request::Shipping::SERVICE_CODES.collect { |key, value| [value, key] }), class: 'form-control') %>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <%= render 'welcome/package_info' %>
     <%= render 'welcome/notification_and_preference' %>
 

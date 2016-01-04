@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
 
-  resources :shippings
+  resources :shippings do
+    member do
+      get 'price'
+      get 'details'
+    end
+    collection do
+      get 'label'
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
