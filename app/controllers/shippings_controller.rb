@@ -21,6 +21,22 @@ class ShippingsController < ApplicationController
   def edit
   end
 
+  def price
+    shipping_id = params[:id] # Shipment ID
+    @response = CANADA_POST_SERVICE.get_price(shipping_id)
+  end
+
+  def label
+    label_url = params[:url] # Shipment ID
+    response = CANADA_POST_SERVICE.get_label(label_url)
+    send_data(response.body, filename: 'shipping_label.pdf')
+  end
+
+  def details
+    shipping_id = params[:id] # Shipment ID
+    @response = CANADA_POST_SERVICE.details(shipping_id)
+  end
+
   # POST /shippings
   # POST /shippings.json
   def create
@@ -40,7 +56,7 @@ class ShippingsController < ApplicationController
         group_id: '5241556',
         mailing_date: '2016-01-10',
         contract_id: '2514533',
-        service_code: 'DOM.EP'
+        service_code: params[:service_code]
     )
     unless @response[:errors].present?
       Shipping.track_shipping(@response)

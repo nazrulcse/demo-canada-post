@@ -1,27 +1,39 @@
-<h3> Shipment Information </h3>
-<ul>
-  <li>
-    <label> Xmlns </label>: <%= @shipping.xmlns %>
-  </li>
-  <li>
-    <label> Shipment ID </label>: <%= @shipping.shipment_id %>
-  </li>
-  <li>
-    <label> Status </label>: <%= @shipping.shipment_status %>
-  </li>
-  <li>
-    <label> Tracking Pin </label>: <%= @shipping.tracking_pin %>
-  </li>
-  <li>
-    <label> Creation </label>: <%= @shipping.created_at %>
-  </li>
-</ul>
+<div class="col-lg-12">
+  <h3> Shipment Information </h3>
+  <ul>
+    <li>
+      <label> Xmlns </label>: <%= @shipping.xmlns %>
+    </li>
+    <li>
+      <label> Shipment ID </label>: <%= @shipping.shipment_id %>
+    </li>
+    <li>
+      <label> Status </label>: <%= @shipping.shipment_status %>
+    </li>
+    <li>
+      <label> Tracking Pin </label>: <%= @shipping.tracking_pin %>
+    </li>
+    <li>
+      <label> Creation </label>: <%= @shipping.created_at %>
+    </li>
+  </ul>
 
-<h3> Shipment Tracking Links </h3>
-<ul>
-  <% @shipping.links.each do |link| %>
-      <li>
-        <%= render 'shippings/link', link: link %>
-      </li>
-  <% end %>
-</ul>
+  <h3> Shipment Tracking Links </h3>
+
+  <div class="panel panel-default">
+    <div class="panel-heading"> Shipping Details</div>
+    <div class="panel-body panel-success">
+      <%= link_to('Get Shipping Price', price_shipping_path(@shipping.shipment_id), class: 'btn btn-warning') %>
+      <%= link_to('Get Shipping Details', details_shipping_path(@shipping.shipment_id), class: 'btn btn-primary') %>
+      <%= link_to('Get Shipping Label', label_shippings_path(url: @shipping.label_url), class: 'btn btn-success') %>
+    </div>
+  </div>
+</div>
+
+<!--<ul>-->
+<%# @shipping.links.each do |link| %>
+<!--<li>-->
+<%#= render 'shippings/link', link: link %>
+<!--</li>-->
+<%# end %>
+<!--</ul>-->

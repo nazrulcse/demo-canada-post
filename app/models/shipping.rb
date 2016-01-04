@@ -14,4 +14,11 @@ class Shipping < ActiveRecord::Base
     end
   end
 
+  def label_url
+    label = links.where(rel: 'label').first
+    if label.present?
+      label.href
+    end
+  end
+
 end
