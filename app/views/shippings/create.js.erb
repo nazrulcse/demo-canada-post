@@ -1,5 +1,5 @@
-if (<%= @response[:errors].present? %>) {
-    $('.shipping-error').removeClass('alert-success').addClass('alert alert-danger').html("<%= @response[:errors] %>");
+if (<%= @response[:create_shipping][:errors].present? %>) {
+    $('.shipping-error').removeClass('alert-success').addClass('alert alert-danger').html("<%= @response[:create_shipping][:errors] %>");
 }
 else {
     $('.shipping-error').removeClass('alert-danger').addClass('alert alert-success').html("Shipping has been created successfully");

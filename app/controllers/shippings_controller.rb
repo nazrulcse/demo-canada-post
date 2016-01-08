@@ -37,6 +37,19 @@ class ShippingsController < ApplicationController
     @response = CANADA_POST_SERVICE.details(shipping_id)
   end
 
+  def artifact
+    url = params[:url]
+    @response = CANADA_POST_SERVICE.get_artifact(url)
+    unless @response[:errors].present?
+      send_data(@response[:artifact].body, filename: 'shipping_artifact.pdf')
+    end
+  end
+
+  def manifest
+    url = params[:url]
+    @response = CANADA_POST_SERVICE.get_manifest(url)
+  end
+
   # POST /shippings
   # POST /shippings.json
   def create
@@ -58,7 +71,8 @@ class ShippingsController < ApplicationController
         contract_id: '2514533',
         service_code: params[:service_code]
     )
-    unless @response[:errors].present?
+    puts "Full Response: #{@response}"
+    unless @response[:create_shipping][:errors].present?
       Shipping.track_shipping(@response)
     end
     respond_to do |format|

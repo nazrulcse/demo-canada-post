@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     end
     collection do
       get 'label'
+      get 'manifest'
+      get 'artifact'
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.

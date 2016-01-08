@@ -23,6 +23,15 @@
 
       <div class="row">
         <div class="col-lg-12">
+          <div class="form-group">
+            <label> Address Line: </label>
+            <%= text_area_tag('sender[address_details][address]', '', class: 'form-control') %>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
           <div class="row">
             <div class="col-lg-6">
               <div class="form-group">
@@ -32,8 +41,8 @@
             </div>
             <div class="col-lg-6">
               <div class="form-group">
-                <label> Address Line: </label>
-                <%= text_area_tag('sender[address_details][address]', '', class: 'form-control') %>
+                <label> Request Shipping Point:</label>
+                <%= text_field_tag('sender[shipping_point]', '', class: 'form-control') %>
               </div>
             </div>
           </div>

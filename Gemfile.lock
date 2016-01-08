@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/shipppit/shipppit-canada-post.git
-  revision: 76fd25b3f24ce6ede69dd00d099c67a1f5484f4b
+  revision: d5131415778f505909cfa99f0089ded64fdd7121
   branch: shipment
   specs:
     canada-post-api (0.0.3)

@@ -25,7 +25,9 @@
     <div class="panel-body panel-success">
       <%= link_to('Get Shipping Price', price_shipping_path(@shipping.shipment_id), class: 'btn btn-warning') %>
       <%= link_to('Get Shipping Details', details_shipping_path(@shipping.shipment_id), class: 'btn btn-primary') %>
-      <%= link_to('Get Shipping Label', label_shippings_path(url: @shipping.label_url), class: 'btn btn-success') %>
+      <%= link_to('Get Shipping Label', label_shippings_path(url: @shipping.get_url('label')), class: 'btn btn-success') %>
+      <%= link_to('Get Manifest', manifest_shippings_path(url: @shipping.get_url('manifest')), class: 'btn btn-success') %>
+      <%= link_to('Get artifact', artifact_shippings_path(url: @shipping.get_url('manifest')), class: 'btn btn-success') %>
     </div>
   </div>
 </div>
