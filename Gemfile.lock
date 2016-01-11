@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/shipppit/shipppit-canada-post.git
-  revision: f8ca890e8cd4a1089bc463c04b0c2d773ece8a1f
+  revision: b6ba0ebe21feec01446b2b532edf52ec1df358b2
   branch: shipment
   specs:
     canada-post-api (0.0.3)
@@ -129,7 +129,7 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
-    spring (1.6.1)
+    spring (1.6.2)
     sprockets (3.5.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)

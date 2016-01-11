@@ -7,13 +7,13 @@
           <div class="row">
             <div class="col-lg-6">
               <div class="form-group">
-                <label>Name:</label>
+                <label>Name*:</label>
                 <%= text_field_tag('destination[name]', '', class: 'form-control') %>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="form-group">
-                <label>Company:</label>
+                <label>Company*:</label>
                 <%= text_field_tag('destination[company]', '', class: 'form-control') %>
               </div>
             </div>
@@ -35,13 +35,13 @@
           <div class="row">
             <div class="col-lg-6">
               <div class="form-group">
-                <label> City: </label>
+                <label> City*: </label>
                 <%= text_field_tag('destination[address_details][city]', 'Montréal', class: 'form-control') %>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="form-group">
-                <label> State: </label>
+                <label> State*: </label>
                 <%= text_field_tag('destination[address_details][state]', 'QC', class: 'form-control') %>
               </div>
             </div>
@@ -53,11 +53,11 @@
         <div class="col-lg-12">
           <div class="row">
             <div class="col-lg-6">
-              <label> Country: </label>
+              <label> Country*: </label>
               <%= text_field_tag('destination[address_details][country]', 'CA', class: 'form-control') %>
             </div>
             <div class="col-lg-6">
-              <label> Zip:</label>
+              <label> Zip*:</label>
               <%= text_field_tag('destination[address_details][zip]', 'H2J2L1', class: 'form-control') %> <br/>
             </div>
           </div>

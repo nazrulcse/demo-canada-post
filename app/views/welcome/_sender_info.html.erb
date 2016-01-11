@@ -7,13 +7,13 @@
           <div class="row">
             <div class="col-lg-6">
               <div class="form-group">
-                <label> Name: </label>
+                <label> Name*: </label>
                 <%= text_field_tag('sender[name]', 'John Doe', class: 'form-control') %>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="form-group">
-                <label>Company:</label>
+                <label>Company*:</label>
                 <%= text_field_tag('sender[company]', 'Apple', class: 'form-control') %>
               </div>
             </div>
@@ -54,13 +54,13 @@
           <div class="row">
             <div class="col-lg-6">
               <div class="form-group">
-                <label> City: </label>
+                <label> City*: </label>
                 <%= text_field_tag('sender[address_details][city]', 'Gatineau', class: 'form-control') %>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="form-group">
-                <label> State: </label>
+                <label> State*: </label>
                 <%= text_field_tag('sender[address_details][state]', 'QC', class: 'form-control') %>
               </div>
             </div>
@@ -72,11 +72,11 @@
         <div class="col-lg-12">
           <div class="row">
             <div class="col-lg-6">
-              <label> Country: </label>
+              <label> Country*: </label>
               <%= text_field_tag('sender[address_details][country]', 'CA', class: 'form-control') %>
             </div>
             <div class="col-lg-6">
-              <label> Zip:</label>
+              <label> Zip*:</label>
               <%= text_field_tag('sender[address_details][zip]', '', class: 'form-control') %> <br/>
             </div>
           </div>
