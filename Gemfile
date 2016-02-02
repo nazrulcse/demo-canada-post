@@ -22,8 +22,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-#gem 'canada-post-api', path: '/home/nazrul/Development/Projects/shipppit-canada-post'
-gem 'canada-post-api', git: 'https://github.com/shipppit/shipppit-canada-post.git', :branch => 'shipment'
+gem 'canada-post-api', path: '/home/nazrul/Development/Projects/shipppit-canada-post'
+#gem 'canada-post-api', git: 'https://github.com/shipppit/shipppit-canada-post.git', :branch => 'shipment'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

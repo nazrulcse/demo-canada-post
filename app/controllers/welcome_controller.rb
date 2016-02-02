@@ -33,7 +33,8 @@ class WelcomeController < ApplicationController
           group_id: '5241556',
           mailing_date: '2016-01-10',
           contract_id: '2514533',
-          service_code: 'DOM.EP'
+          service_code: 'DOM.EP',
+          mobo: params[:mobo]
       )
     end
   end
