@@ -1,0 +1,5 @@
+<% if  @uploader.present? %>
+content = $('#post_content').val();
+content += "![Upload <%= @uploader.image_url.split('/').last %>](<%= @uploader.image_url %>)";
+$('#post_content').val(content);
+<%end%>

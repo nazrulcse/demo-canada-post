@@ -69,7 +69,8 @@ class ShippingsController < ApplicationController
         group_id: '5241556',
         mailing_date: '2016-01-20',
         contract_id: '2514533',
-        service_code: params[:service_code]
+        service_code: params[:service_code],
+        mobo: params[:mobo]
     )
     puts "Full Response: #{@response}"
     unless @response[:create_shipping][:errors].present?
