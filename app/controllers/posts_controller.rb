@@ -15,9 +15,9 @@ class PostsController < ApplicationController
 
   def upload
     unless params[:file0].nil?
-      @uploader = PostUpload.last#PostUpload.new
-      # @uploader.image = params[:file0]
-      # @uploader.save
+      @uploader = PostUpload.new#.last#PostUpload.new
+      @uploader.image = params[:file0]
+      @uploader.save
     end
     puts @uploader.inspect
     respond_to do |format|

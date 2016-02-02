@@ -1,5 +1,7 @@
-<% if  @uploader.present? %>
+<% if  @uploader.errors.present? %>
+alert("Only Image allowed here");
+<%else%>
 content = $('#post_content').val();
-content += "![<%= @uploader.image_identifier %>](<%= @uploader.image_url %>)";
+content += "![<%= @uploader.image_identifier %>](<%= image_without_asw_params(@uploader.image_url) %>)";
 $('#post_content').val(content);
 <%end%>

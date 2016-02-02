@@ -38,7 +38,6 @@
         };
 
         dropzone.ondrop = function (e) {
-            console.log('drop'); // for debugging reasons
             $('#post_content').removeClass('drop-active');
             e.preventDefault();  // stop default behaviour
             readfiles(e.dataTransfer.files); // function to handle file(s) that was added to dropzone
@@ -48,7 +47,15 @@
     function readfiles(files) {
         var formData = new FormData(); // we initialise a new form that will be send to php
         for (var i = 0; i < files.length; i++) {
-            formData.append('file' + i, files[i]);
+            filename = files[i].name;
+            ext = filename.split('.').pop();
+            if ("jpg jpeg gif png".indexOf(ext) > -1) {
+                formData.append('file' + i, files[i]);
+            }
+            else {
+                alert("Only image allowed here");
+                return false;
+            }
         }
         //formData.append('moreInfo', 'myValuableValue');// you can append additional string info
         $.ajax({
