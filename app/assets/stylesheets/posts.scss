@@ -1,0 +1,15 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.drop-active {
+  border: dotted 2px #cccccc;
+  background: #dfdfdf;
+}
+
+#post_content {
+  min-height: 250px;
+}
+
+ul {
+  list-style: none;
+}

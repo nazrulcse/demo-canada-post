@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  resources :posts do
+    collection do
+      post 'upload'
+    end
+  end
   resources :shippings do
     member do
       get 'price'

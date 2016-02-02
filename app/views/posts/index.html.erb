@@ -1,0 +1,67 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Posts</h1>
+
+<ul>
+  <% @posts.each do |post| %>
+      <li>
+        <!--<h4><%#= post.title %></h4>-->
+
+        <div>
+          <%= raw Markdown.new(post.content).to_html %>
+        </div>
+        <div class="actions">
+          <%= link_to 'Edit', edit_post_path(post) %>
+          <%= link_to 'Destroy', post, method: :delete, data: {confirm: 'Are you sure?'} %>
+        </div>
+      </li>
+  <% end %>
+</ul>
+
+<br>
+
+<%= render 'post_form' %>
+
+<script type="text/javascript">
+    $(function () {
+        var dropzone = document.getElementById('post_content'); // paste your dropzone id here
+        dropzone.ondragenter = function (e) {
+            $('#post_content').addClass('drop-active');
+        };
+
+        dropzone.ondragover = function (e) {
+            $('#post_content').addClass('drop-active');
+        };
+
+        dropzone.ondragleave = function (e) {
+            $('#post_content').removeClass('drop-active');
+        };
+
+        dropzone.ondrop = function (e) {
+            console.log('drop'); // for debugging reasons
+            $('#post_content').removeClass('drop-active');
+            e.preventDefault();  // stop default behaviour
+            readfiles(e.dataTransfer.files); // function to handle file(s) that was added to dropzone
+        };
+    });
+
+    function readfiles(files) {
+        var formData = new FormData(); // we initialise a new form that will be send to php
+        for (var i = 0; i < files.length; i++) {
+            formData.append('file' + i, files[i]);
+        }
+        //formData.append('moreInfo', 'myValuableValue');// you can append additional string info
+        $.ajax({
+            url: '<%= upload_posts_path %>',
+            type: 'POST',
+            data: formData,
+            async: true,
+            success: function (data) {
+
+            },
+            cache: false,
+            contentType: false,
+            processData: false
+        });
+    }
+</script>

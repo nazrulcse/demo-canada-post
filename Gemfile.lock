@@ -1,5 +1,7 @@
-PATH
-  remote: /home/nazrul/Development/Projects/shipppit-canada-post
+GIT
+  remote: https://github.com/shipppit/shipppit-canada-post.git
+  revision: f28d10fa0a51135b6ed11527ed5bdf5f9d7be4b2
+  branch: shipment
   specs:
     canada-post-api (0.0.3)
       activesupport (~> 4.2)
@@ -49,6 +51,11 @@ GEM
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
     byebug (8.2.1)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.1.x)
@@ -117,6 +124,7 @@ GEM
     rake (10.4.2)
     rdoc (4.2.1)
       json (~> 1.4)
+    redcarpet (3.3.3)
     sass (3.4.20)
     sass-rails (5.0.4)
       railties (>= 4.0.0, < 5.0)
@@ -157,12 +165,14 @@ PLATFORMS
 DEPENDENCIES
   byebug
   canada-post-api!
+  carrierwave
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
   mysql2 (= 0.3.20)
   pg
   rails (= 4.2.5)
+  redcarpet
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
