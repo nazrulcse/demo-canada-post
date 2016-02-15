@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
   post '/' => 'welcome#index'
   get 'token' => 'registration#token'
+  get '/registration_callback' => 'registration#callback'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

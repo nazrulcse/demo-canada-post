@@ -4,6 +4,7 @@ class ShippingsController < ApplicationController
   # GET /shippings
   # GET /shippings.json
   def index
+    puts @unknown.round(0)
     @shippings = Shipping.all
   end
 
@@ -67,10 +68,15 @@ class ShippingsController < ApplicationController
         preferences: @preferences,
         settlement_info: @settlement_info,
         group_id: '5241556',
-        mailing_date: '2016-01-20',
-        contract_id: '2514533',
+        mailing_date: '2016-02-28',
+        contract_number: '0042956527',
         service_code: params[:service_code],
-        mobo: params[:mobo]
+        mobo: {
+            customer_number: params[:mobo],
+            username: 'bc02d6bd3733555c',
+            password: '111d1a0d29fc00aa47b66a',
+            contract_number: '0042956527'
+        }
     )
     puts "Full Response: #{@response}"
     unless @response[:create_shipping][:errors].present?
