@@ -1,7 +1,9 @@
-PATH
-  remote: /home/nazrul/Development/Projects/shipppit-canada-post
+GIT
+  remote: https://github.com/shipppit/shipppit-canada-post.git
+  revision: 8980d98e6318b497b017b076934a541b9bfd5cab
+  branch: master
   specs:
-    canada-post-api (0.0.3)
+    shipppit-canada-post (0.5.2)
       activesupport (~> 4.2)
       httparty (~> 0.13.7)
       nokogiri (~> 1.6, >= 1.6.7.1)
@@ -271,7 +273,6 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  canada-post-api!
   carrierwave
   coffee-rails (~> 4.1.0)
   fog
@@ -284,6 +285,7 @@ DEPENDENCIES
   redcarpet
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  shipppit-canada-post!
   spring
   turbolinks
   uglifier (>= 1.3.0)

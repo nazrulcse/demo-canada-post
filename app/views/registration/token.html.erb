@@ -1,7 +1,7 @@
-<%= @token.inspect %>
-<form action="https://www.canadapost.ca/cpotools/apps/drc/merchant" method="post">
+<form action="https://www.canadapost.ca/cpotools/apps/drc/testMerchant" method="post">
   <input type="text" name="return-url" value="http://22b581b6.ngrok.com/registration_callback"/>
+  <!-- put your application callback where back from canadapost after complete registration -->
   <input type="text" name="token-id" value="1111111111111111111111"/>
-  <input type="text" name="platform-id" value="0009364042"/>
+  <input type="text" name="platform-id" value="9364042"/>
   <input type="submit" value="Registration">
 </form>

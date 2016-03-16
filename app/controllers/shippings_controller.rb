@@ -68,7 +68,7 @@ class ShippingsController < ApplicationController
         preferences: @preferences,
         settlement_info: @settlement_info,
         group_id: '5241556',
-        mailing_date: '2016-02-28',
+        mailing_date: '2016-04-28',
         contract_number: '0042956527',
         service_code: params[:service_code],
         mobo: {
