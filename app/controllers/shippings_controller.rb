@@ -69,7 +69,7 @@ class ShippingsController < ApplicationController
         settlement_info: @settlement_info,
         group_id: '5241556',
         mailing_date: Date.today,
-        contract_number: '0042956527',
+        contract_id: '0042956527',
         service_code: params[:service_code],
         mobo: {
             customer_number: params[:mobo],
