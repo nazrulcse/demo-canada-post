@@ -60,7 +60,7 @@ class ShippingsController < ApplicationController
     @notification = params[:notification]
     @preferences = params[:preferences]
     @settlement_info = params[:settlement_info]
-    @params = {
+    @request = {
       sender: @sender,
       destination: @destination,
       package: @package,
@@ -78,7 +78,7 @@ class ShippingsController < ApplicationController
         contract_number: '0042956527'
       }
     }
-    puts @params
+    puts "**** #{@request}"
 
     @response = CANADA_POST_SERVICE.create(
         sender: @sender,
