@@ -60,6 +60,26 @@ class ShippingsController < ApplicationController
     @notification = params[:notification]
     @preferences = params[:preferences]
     @settlement_info = params[:settlement_info]
+    @params = {
+      sender: @sender,
+      destination: @destination,
+      package: @package,
+      notification: @notification,
+      preferences: @preferences,
+      settlement_info: @settlement_info,
+      group_id: '5241556',
+      mailing_date: Date.today,
+      contract_number: '0042956527',
+      service_code: params[:service_code],
+      mobo: {
+        customer_number: params[:mobo],
+        username: 'bc02d6bd3733555c',
+        password: '111d1a0d29fc00aa47b66a',
+        contract_number: '0042956527'
+      }
+    }
+    puts @params
+
     @response = CANADA_POST_SERVICE.create(
         sender: @sender,
         destination: @destination,
